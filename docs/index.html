@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Firstangular</title>
+  <base href="C:/Program Files/Git/firstangular/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+<link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
+<body>
+  <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+
+  <!-- https://stackoverflow.com/questions/49798649/angular-5-mobile-camera-capture-->
+
+  <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" (change)="onFileSelected($event)">camera</input>
+  <input type="file" accept="image/png, image/jpeg" id="galleryInput" name="galleryInput" (change)="onFileSelected($event)">gallery</input>
+  <button type="button" (click)="onUpload()">Upload File</button>
+
+<script src="runtime-es2015.858f8dd898b75fe86926.js" type="module"></script><script src="polyfills-es2015.edf60e92366a5a261979.js" type="module"></script><script src="runtime-es5.741402d1d47331ce975c.js" nomodule></script><script src="polyfills-es5.943113ac054b16d954ae.js" nomodule></script><script src="main-es2015.198129bf806c0c598f7f.js" type="module"></script><script src="main-es5.70992092cdbcf7ebbf7b.js" nomodule></script></body>
+</html>
