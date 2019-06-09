@@ -12,18 +12,12 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
 
-
-export class AppComponent {
-  title = 'app';
-  selectedFile = null;
-
-  onFileSelected(event)
-  {
-    this.selectedFile = event.target.files[0];
-  }
-
-  onUpload()
-  {
-    console.log(this.selectedFile); // You can use FormData upload to backend server
-  }
-}
+  platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
+    if ('serviceWorker' in navigator && environment.production) {
+      navigator.serviceWorker.register('./ngsw-worker.js');
+    }
+    else{
+      console.log("prod :" + environment.production);
+      navigator.serviceWorker.register('./ngsw-worker.js');
+    }
+  }).catch(err => console.log(err));

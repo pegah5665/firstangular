@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+//https://www.npmjs.com/package/ngx-webcam
 import {WebcamModule} from 'ngx-webcam';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import {WebcamModule} from 'ngx-webcam';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     WebcamModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
